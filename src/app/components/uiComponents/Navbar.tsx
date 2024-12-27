@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ButtonSecondary from "../sharedComponents/uiComponents/ButtonSecondary";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center py-4 px-5">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="/">Coder Blogger</a>
+          <Link href="/">Coder Blogger</Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -31,16 +32,16 @@ const Navbar = () => {
           }`}
         >
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <a href="#">Home</a>
+            <Link href="#">Home</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <a href="#">About</a>
+            <Link href="#">About</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <a href="#">Blog</a>
+            <Link href="#">Blog</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <a href="#">Contact</a>
+            <Link href="#">Contact</Link>
           </li>
           <ButtonSecondary>Contact Us</ButtonSecondary>
         </ul>
