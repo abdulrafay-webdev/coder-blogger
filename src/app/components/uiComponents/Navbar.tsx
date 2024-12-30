@@ -27,8 +27,8 @@ const Navbar = () => {
 
         {/* Links */}
         <ul
-          className={`absolute md:static bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:bg-none w-full md:w-auto top-16 md:top-auto left-0 flex flex-col md:flex-row md:space-x-6 items-center text-lg md:opacity-100 transition-all duration-300 ${
-            isOpen ? "opacity-100 z-20 py-5" : "opacity-0 pointer-events-none"
+          className={`md:flex md:items-center md:space-x-6 absolute md:static bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:bg-none w-full md:w-auto top-16 md:top-auto left-0 text-center flex flex-col md:flex-row text-lg transition-all duration-300 ${
+            isOpen ? "opacity-100 z-20 py-5" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
           }`}
         >
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
@@ -38,12 +38,14 @@ const Navbar = () => {
             <Link href="#">About</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <Link href="#">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
             <Link href="#">Contact</Link>
           </li>
+          <div className="self-center">
           <ButtonSecondary>Contact Us</ButtonSecondary>
+          </div>
         </ul>
       </div>
     </nav>

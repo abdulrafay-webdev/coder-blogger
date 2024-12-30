@@ -1,24 +1,30 @@
 import React from 'react';
-import promotion from '../../../../public/Images/promotion.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
 
-const BlogCard= () => {
+const BlogCard= (props:any) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <Image
-        src={promotion}
+        src={props.image}
         alt="Blog Image"
+        width={500}
+        height={500}
         className="w-full h-56 object-cover"
       />
       <div className="p-4">
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">Hello World</h3>
-        <p className="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus veniam facilis sit rerum assumenda asperiores fuga ea iusto dolorum sed?</p>
-        <a href='' className="text-blue-500 hover:text-blue-700">
+      <p className="text-gray-500 mt-6">
+            Published At : {new Date(props.Date).toLocaleDateString()}
+          </p>
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">{props.title}</h3>
+        
+        <p className="text-gray-600 text-sm mb-4" >{props.shortdescription}</p>
+        <Link href={`/blog/${props.link}`} className="text-blue-500 hover:text-blue-700">
           Read More
-        </a>
+        </Link>
       </div>
     </div>
   );

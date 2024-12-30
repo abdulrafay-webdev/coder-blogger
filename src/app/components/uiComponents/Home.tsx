@@ -3,8 +3,27 @@ import React from "react";
 import promotion from "../../../../public/Images/promotion.png";
 import ButtonPrimary from "../sharedComponents/uiComponents/ButtonPrimary";
 import BlogCard from "../sharedComponents/Card";
+import { client } from "../../../../sanity/lib/client";
 
-function HomePage() {
+const GetData = async ()=>{
+const BlogData = await client.fetch(
+  `*[_type == "blogPost"] {
+      title,
+      shortDescription,
+      slug,
+      "MainImageURL": mainImage.asset->url,
+      content,
+      publishedAt
+    }`
+)
+return BlogData
+}
+
+async function HomePage() {
+
+  const Blog = await GetData()
+  console.log(Blog)
+
   return (
     <div>
       <div className="container mx-auto px-3">
@@ -34,12 +53,15 @@ function HomePage() {
             Latest Blogs
           </h1>
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+           {
+               Blog.map((item:any,i:any)=>{
+                 return(
+                   <div key={i}>
+                     <BlogCard image={item.MainImageURL} title={item.title} link={item.slug.current} shortdescription={item.shortDescription} Date={item.publishedAt} />
+                   </div>
+               )
+               })
+              }
           </div>
         </div>
       </div>

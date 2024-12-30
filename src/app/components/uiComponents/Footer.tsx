@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonSecondary from '../sharedComponents/uiComponents/ButtonSecondary';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
@@ -10,10 +11,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul>
-              <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-              <li><a href="#" className="hover:text-yellow-400">About</a></li>
-              <li><a href="#" className="hover:text-yellow-400">Blog</a></li>
-              <li><a href="#" className="hover:text-yellow-400">Contact</a></li>
+              <li><Link href="#" className="hover:text-yellow-400">Home</Link></li>
+              <li><Link href="#" className="hover:text-yellow-400">About</Link></li>
+              <li><Link href="#" className="hover:text-yellow-400">Blog</Link></li>
+              <li><Link href="#" className="hover:text-yellow-400">Contact</Link></li>
             </ul>
           </div>
 
@@ -21,10 +22,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
             <ul className="flex space-x-6">
-              <li><a href="#" className="hover:text-yellow-400"><i className="fab fa-facebook-f"></i></a></li>
-              <li><a href="#" className="hover:text-yellow-400"><i className="fab fa-twitter"></i></a></li>
-              <li><a href="#" className="hover:text-yellow-400"><i className="fab fa-instagram"></i></a></li>
-              <li><a href="#" className="hover:text-yellow-400"><i className="fab fa-linkedin-in"></i></a></li>
+              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-facebook-f"></i></Link></li>
+              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-twitter"></i></Link></li>
+              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-instagram"></i></Link></li>
+              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-linkedin-in"></i></Link></li>
             </ul>
           </div>
 
