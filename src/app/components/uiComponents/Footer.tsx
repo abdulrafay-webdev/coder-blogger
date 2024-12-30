@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
             <ul className="flex space-x-6">
-              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-facebook-f"></i></Link></li>
+              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-twitter"></i></Link></li>
               <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-twitter"></i></Link></li>
               <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-instagram"></i></Link></li>
               <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-linkedin-in"></i></Link></li>
