@@ -2,12 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "next.config.js",
+      "src": "next.config.ts",
       "use": "@vercel/next"
     }
   ],
   "env": {
-    "NEXT_PUBLIC_SANITY_PROJECT_ID": "3va0wamo",
+    "NEXT_PUBLIC_SANITY_PROJECT_ID": "your_sanity_project_id",
     "NEXT_PUBLIC_SANITY_DATASET": "production"
+  },
+  "images": {
+    "domains": ["cdn.sanity.io"]
   }
 }
