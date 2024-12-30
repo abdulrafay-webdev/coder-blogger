@@ -2,17 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
-    },
-    {
-      "env": {
-        "NODE_ENV": "production"
-      },
-      "commands": {
-        "install": "npm install --legacy-peer-deps",
-        "build": "npm run build"
-      }
+      "src": "next.config.js",
+      "use": "@vercel/next"
     }
-  ]
+  ],
+  "env": {
+    "NEXT_PUBLIC_SANITY_PROJECT_ID": "3va0wamo",
+    "NEXT_PUBLIC_SANITY_DATASET": "production"
+  }
 }
