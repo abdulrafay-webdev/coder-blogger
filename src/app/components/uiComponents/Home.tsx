@@ -4,6 +4,7 @@ import promotion from "../../../../public/Images/promotion.png";
 import ButtonPrimary from "../sharedComponents/uiComponents/ButtonPrimary";
 import BlogCard from "../sharedComponents/Card";
 import { client } from "../../../../sanity/lib/client";
+import Link from "next/link";
 
 const GetData = async ()=>{
 const BlogData = await client.fetch(
@@ -41,7 +42,9 @@ async function HomePage() {
                 <b>Author :</b> Abdul Rafay
               </p>
               <div className="card-actions justify-center">
+                <Link href={'/blog/the-impact-of-technology-on-the-workplace-how-technology-is-changing'}>
                 <ButtonPrimary>Learn More</ButtonPrimary>
+                </Link>
               </div>
             </div>
           </div>

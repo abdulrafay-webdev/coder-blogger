@@ -32,19 +32,17 @@ const Navbar = () => {
           }`}
         >
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <Link href="#">Home</Link>
-          </li>
-          <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <Link href="#">About</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
             <Link href="/blog">Blog</Link>
           </li>
           <li className="py-2 md:py-0 hover:text-yellow-300 transition-colors">
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
-          <div className="self-center">
-          <ButtonSecondary>Contact Us</ButtonSecondary>
+          <div className="self-center"><Link target="blank" href={'https://www.youtube.com/@AllCodeWithAI'}>
+          <ButtonSecondary>Tutorials</ButtonSecondary>
+          </Link>
           </div>
         </ul>
       </div>

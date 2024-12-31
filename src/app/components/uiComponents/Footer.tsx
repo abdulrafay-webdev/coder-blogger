@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonSecondary from '../sharedComponents/uiComponents/ButtonSecondary';
 import Link from 'next/link';
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
@@ -11,10 +12,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul>
-              <li><Link href="#" className="hover:text-yellow-400">Home</Link></li>
-              <li><Link href="#" className="hover:text-yellow-400">About</Link></li>
-              <li><Link href="#" className="hover:text-yellow-400">Blog</Link></li>
-              <li><Link href="#" className="hover:text-yellow-400">Contact</Link></li>
+              <li><Link href="/" className="hover:text-yellow-400">Home</Link></li>
+              <li><Link href="/blog" className="hover:text-yellow-400">Blog</Link></li>
+              <li><Link href="/contact" className="hover:text-yellow-400">Contact</Link></li>
             </ul>
           </div>
 
@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
             <ul className="flex space-x-6">
-              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-twitter"></i></Link></li>
-              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-twitter"></i></Link></li>
-              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-instagram"></i></Link></li>
-              <li><Link href="#" className="hover:text-yellow-400"><i className="fab fa-linkedin-in"></i></Link></li>
+              <li><Link target='blank' href="https://www.facebook.com/profile.php?id=61570577443825&mibextid=ZbWKwL" ><FaFacebook size={30} className="text-white hover:text-blue-800" /></Link></li>
+              <li><Link target='blank' href="https://wa.me/message/6RMRPE5J3PRGL1" ><FaWhatsapp size={30} className="text-white hover:text-green-800" /></Link></li>
+              <li><Link target='blank' href="https://www.linkedin.com/in/abdul-rafay-073187278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" ><FaLinkedin size={30} className="text-white hover:text-blue-900" /></Link></li>
+              <li><Link target='blank' href="https://www.instagram.com/abdulrafaywebdev?igsh=YzljYTk1ODg3Zg=="><FaInstagram size={30} className="text-white hover:text-pink-800" /></Link></li>
             </ul>
           </div>
 
