@@ -96,7 +96,7 @@ import BlogCard from "../sharedComponents/Card";
 import { client } from "../../../../sanity/lib/client";
 import Link from "next/link";
 
-function HomePage() {
+ function HomePage() {
   // State to store fetched blog data
   const [BlogData, setBlogData] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);  // Loading state
