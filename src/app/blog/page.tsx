@@ -15,6 +15,10 @@ const GetData = async () => {
   return BlogData;
 };
 
+
+
+
+
 async function page() {
   const Blog = await GetData();
 
